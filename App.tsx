@@ -51,9 +51,7 @@ const Header = () => {
 
 const Hero = () => (
   <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden">
-    {/* Video Background Overlay */}
     <div className="absolute inset-0 bg-black/40 z-10" />
-    
     <video 
       autoPlay 
       loop 
@@ -91,7 +89,6 @@ const Structure = () => (
         Um espaço moderno com Wi-Fi, climatização e máquinas de última geração para sua total comodidade.
       </p>
     </div>
-    
     <div className="container mx-auto px-4">
       <div className="relative max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-[12px] border-slate-50 ring-1 ring-slate-200">
         <video 
@@ -105,11 +102,6 @@ const Structure = () => (
           Seu navegador não suporta o elemento de vídeo.
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-white text-xs font-medium uppercase tracking-widest">
-            Tour Virtual
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -127,12 +119,10 @@ const WhatsAppNotification = () => (
             Qualidade Garantida
           </h2>
         </div>
-
         <div className="bg-[#22c55e] text-white px-6 py-4 rounded-xl flex items-center gap-3 shadow-lg mb-10 w-full md:w-auto">
           <IconMap.CheckCircle className="w-6 h-6" />
           <span className="text-lg font-bold">Utilizamos OMO e Comfort!</span>
         </div>
-
         <div className="bg-white p-8 rounded-2xl shadow-xl flex items-start gap-5 max-w-lg">
           <div className="text-[#10b981] p-1">
             <IconMap.Smartphone className="w-8 h-8" />
@@ -354,7 +344,16 @@ const Footer = () => (
   </footer>
 );
 
-// Main App Component assembling all sections
+const WhatsAppWidget = () => (
+  <a 
+    href="https://wa.link/fh6wk8" 
+    target="_blank" 
+    className="fixed bottom-8 right-8 z-[100] bg-[#22c55e] p-4 rounded-full shadow-2xl transition-transform hover:scale-110 active:scale-90 animate-bounce-subtle"
+  >
+    <WhatsAppIcon className="w-8 h-8 text-white" />
+  </a>
+);
+
 const App = () => {
   return (
     <div className="min-h-screen font-sans text-slate-900 bg-white">
@@ -369,9 +368,9 @@ const App = () => {
       <FAQ />
       <Contact />
       <Footer />
+      <WhatsAppWidget />
     </div>
   );
 };
 
-// Fixing: Module '"file:///App"' has no default export.
 export default App;
