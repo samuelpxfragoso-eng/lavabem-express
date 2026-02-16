@@ -107,12 +107,114 @@ const Structure = () => (
   </section>
 );
 
+const InstagramSection = () => {
+  const igImages = [
+    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171428.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNDI4LnBuZyIsImlhdCI6MTc3MTI3MzEzMCwiZXhwIjoxODAyODA5MTMwfQ.3KWJJc1eCnmTxB8NEva5har_wxSHnQrgtN6vfLqd6S4",
+    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171443.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNDQzLnBuZyIsImlhdCI6MTc3MTI3MzE1OSwiZXhwIjoxODAyODA5MTU5fQ.uBHA7oY5V6gY8wJY_UAW8RN9asMyu1P--KIgKN4f08o",
+    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171506.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNTA2LnBuZyIsImlhdCI6MTc3MTI3MzE4NCwiZXhwIjoxODAyODA5MTg0fQ.CwPeyc7trFgUdkSXOB_Y6wmx0BimaCoVRMXQug9mlJE",
+    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171549.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNTQ5LnBuZyIsImlhdCI6MTc3MTI3MzIyMywiZXhwIjoxODAyODA5MjIzfQ.FqO4S9-viVShs5YXHAFBgWUp2HQ0wvd5eMZXUBE2EY0",
+    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171525.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNTI1LnBuZyIsImlhdCI6MTc3MTI3MzI0NSwiZXhwIjoxODAyODA5MjQ1fQ.Hs5fhbpimZ8WpnPbeosNKvn1FwB_pVRFrVWQGUp6ZCk"
+  ];
+
+  const loopImages = [...igImages, ...igImages];
+
+  return (
+    <section className="py-24 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 mb-12 text-center">
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <IconMap.Instagram className="w-8 h-8 text-[#16a34a]" />
+          <h2 className="text-4xl md:text-5xl font-brand text-[#064e3b]">
+            Siga-nos no Instagram
+          </h2>
+        </div>
+        <p className="text-slate-500 text-lg">
+          Confira o dia a dia da nossa lavanderia e fique por dentro das novidades.
+        </p>
+      </div>
+
+      <div className="relative">
+        <div className="overflow-x-auto scrollbar-hide flex animate-marquee gap-6 px-4 py-4">
+          {loopImages.map((src, idx) => (
+            <div 
+              key={idx} 
+              className="min-w-[280px] h-[350px] md:min-w-[320px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl flex-shrink-0 transition-transform hover:scale-105 relative"
+            >
+              <img 
+                src={src} 
+                alt={`Instagram post ${idx}`} 
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+      </div>
+
+      <div className="text-center mt-12">
+        <a 
+          href="https://instagram.com/lavabemexpress" 
+          target="_blank" 
+          className="inline-flex items-center gap-2 text-[#16a34a] font-bold text-lg hover:underline"
+        >
+          @lavabemexpress <IconMap.Instagram className="w-5 h-5" />
+        </a>
+      </div>
+    </section>
+  );
+};
+
+const Testimonials = () => (
+  <section id="depoimentos" className="py-24 bg-slate-900 text-white">
+    <div className="container mx-auto px-4">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-heading mb-4 text-[#16a34a]">O que dizem nossos clientes</h2>
+        <div className="flex justify-center gap-1 mb-8">
+          {[1,2,3,4,5].map(i => <IconMap.Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />)}
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        {testimonials.map((t) => (
+          <div key={t.id} className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-[#16a34a]/30 transition-colors">
+            <p className="text-lg italic mb-6 opacity-90 leading-relaxed">"{t.text}"</p>
+            <div className="flex items-center gap-4">
+              <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full border-2 border-[#16a34a]/30" />
+              <div>
+                <h4 className="font-bold">{t.name}</h4>
+                <p className="text-xs opacity-60 uppercase tracking-widest">{t.role}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div className="flex flex-col items-center gap-8 bg-white/5 p-10 rounded-[3rem] border border-white/10 max-w-2xl mx-auto shadow-2xl">
+        <div className="text-center">
+          <h3 className="text-2xl font-bold mb-3">Já nos visitou?</h3>
+          <p className="text-slate-400">Sua avaliação no Google nos ajuda a crescer e a oferecer o melhor serviço!</p>
+        </div>
+        <a 
+          href="https://g.page/r/Ca0-PpeWCgxqEAE/review" 
+          target="_blank" 
+          className="bg-white text-slate-900 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-[#16a34a] hover:text-white transition-all shadow-xl flex items-center gap-4 active:scale-95 group"
+        >
+          <div className="bg-yellow-400 p-2 rounded-lg group-hover:bg-white transition-colors">
+            <IconMap.Star className="w-6 h-6 text-white group-hover:text-yellow-400 fill-current" />
+          </div>
+          Avaliar no Google
+        </a>
+      </div>
+    </div>
+  </section>
+);
+
 const WhatsAppNotification = () => (
   <section className="bg-[#f0fdf4] py-20 overflow-hidden">
     <div className="container mx-auto px-4">
       <div className="flex flex-col items-center max-w-xl mx-auto md:items-start md:mx-0">
         <div className="flex items-center gap-3 mb-6">
-          <div className="bg-white p-1 rounded-full shadow-sm">
+          <div className="bg-white p-2 rounded-full shadow-sm">
              <WhatsAppIcon className="w-6 h-6 text-[#22c55e]" />
           </div>
           <h2 className="text-4xl md:text-5xl font-brand text-[#064e3b]">
@@ -123,7 +225,7 @@ const WhatsAppNotification = () => (
           <IconMap.CheckCircle className="w-6 h-6" />
           <span className="text-lg font-bold">Utilizamos OMO e Comfort!</span>
         </div>
-        <div className="bg-white p-8 rounded-2xl shadow-xl flex items-start gap-5 max-w-lg">
+        <div className="bg-white p-8 rounded-2xl shadow-xl flex items-start gap-5 max-w-lg border border-emerald-100">
           <div className="text-[#10b981] p-1">
             <IconMap.Smartphone className="w-8 h-8" />
           </div>
@@ -173,67 +275,6 @@ const Differentials = () => (
   </section>
 );
 
-const InstagramSection = () => {
-  const igImages = [
-    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171428.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNDI4LnBuZyIsImlhdCI6MTc3MTI3MzEzMCwiZXhwIjoxODAyODA5MTMwfQ.3KWJJc1eCnmTxB8NEva5har_wxSHnQrgtN6vfLqd6S4",
-    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171443.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNDQzLnBuZyIsImlhdCI6MTc3MTI3MzE1OSwiZXhwIjoxODAyODA5MTU5fQ.uBHA7oY5V6gY8wJY_UAW8RN9asMyu1P--KIgKN4f08o",
-    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171506.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNTA2LnBuZyIsImlhdCI6MTc3MTI3MzE4NCwiZXhwIjoxODAyODA5MTg0fQ.CwPeyc7trFgUdkSXOB_Y6wmx0BimaCoVRMXQug9mlJE",
-    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171549.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNTQ5LnBuZyIsImlhdCI6MTc3MTI3MzIyMywiZXhwIjoxODAyODA5MjIzfQ.FqO4S9-viVShs5YXHAFBgWUp2HQ0wvd5eMZXUBE2EY0",
-    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171525.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNTI1LnBuZyIsImlhdCI6MTc3MTI3MzI0NSwiZXhwIjoxODAyODA5MjQ1fQ.Hs5fhbpimZ8WpnPbeosNKvn1FwB_pVRFrVWQGUp6ZCk"
-  ];
-
-  // Duplicate images for infinite marquee effect
-  const loopImages = [...igImages, ...igImages];
-
-  return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 mb-12 text-center">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <IconMap.Instagram className="w-8 h-8 text-[#16a34a]" />
-          <h2 className="text-4xl md:text-5xl font-brand text-[#064e3b]">
-            Siga-nos no Instagram
-          </h2>
-        </div>
-        <p className="text-slate-500 text-lg">
-          Confira o dia a dia da nossa lavanderia e fique por dentro das novidades.
-        </p>
-      </div>
-
-      <div className="relative group">
-        <div className="overflow-x-auto scrollbar-hide snap-x flex animate-marquee gap-6 px-4 py-4">
-          {loopImages.map((src, idx) => (
-            <div 
-              key={idx} 
-              className="min-w-[280px] h-[350px] md:min-w-[320px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl flex-shrink-0 transition-transform hover:scale-105 snap-center cursor-pointer relative"
-            >
-              <img 
-                src={src} 
-                alt={`Instagram post ${idx}`} 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                <IconMap.Instagram className="w-12 h-12 text-white" />
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-      </div>
-
-      <div className="text-center mt-12">
-        <a 
-          href="https://instagram.com/lavabemexpress" 
-          target="_blank" 
-          className="inline-flex items-center gap-2 text-[#16a34a] font-bold text-lg hover:underline"
-        >
-          @lavabemexpress <IconMap.Instagram className="w-5 h-5" />
-        </a>
-      </div>
-    </section>
-  );
-};
-
 const Plans = () => (
   <section id="planos" className="py-24 bg-slate-50">
     <div className="container mx-auto px-4">
@@ -253,7 +294,7 @@ const Plans = () => (
                 </li>
               ))}
             </ul>
-            <a href="https://wa.link/fh6wk8" target="_blank" className="block text-center bg-[#16a34a] text-white py-4 rounded-xl font-bold hover:bg-[#15803d] transition-colors">
+            <a href="https://wa.link/fh6wk8" target="_blank" className="block text-center bg-[#16a34a] text-white py-4 rounded-xl font-bold hover:bg-[#15803d] transition-colors shadow-lg">
               Começar Agora
             </a>
           </div>
@@ -288,56 +329,18 @@ const FabricCare = () => (
   </section>
 );
 
-const Testimonials = () => (
-  <section id="depoimentos" className="py-24 bg-slate-900 text-white">
-    <div className="container mx-auto px-4">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-heading mb-4">O que dizem nossos clientes</h2>
-        <div className="flex justify-center gap-1 mb-8">
-          {[1,2,3,4,5].map(i => <IconMap.Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />)}
-        </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        {testimonials.map((t) => (
-          <div key={t.id} className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
-            <p className="text-lg italic mb-6 opacity-90">"{t.text}"</p>
-            <div className="flex items-center gap-4">
-              <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full" />
-              <div>
-                <h4 className="font-bold">{t.name}</h4>
-                <p className="text-sm opacity-60">{t.role}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="flex flex-col items-center gap-6">
-        <p className="text-xl opacity-80 text-center max-w-lg">Sua opinião é muito importante para nós!</p>
-        <a 
-          href="https://g.page/r/Ca0-PpeWCgxqEAE/review" 
-          target="_blank" 
-          className="bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-slate-100 transition-all shadow-xl flex items-center gap-3 active:scale-95"
-        >
-          <IconMap.Star className="w-6 h-6 text-yellow-500 fill-yellow-500" />
-          Deixe sua avaliação no Google
-        </a>
-      </div>
-    </div>
-  </section>
-);
-
 const FAQ = () => (
   <section className="py-24 bg-white">
     <div className="container mx-auto px-4 max-w-3xl">
-      <h2 className="text-4xl font-heading text-center text-[#16a34a] mb-12">Dúvidas Frequentes</h2>
+      <h2 className="text-4xl font-heading text-center text-[#16a34a] mb-12 text-[#16a34a]">Dúvidas Frequentes</h2>
       <div className="space-y-4">
         {faqs.map((faq, idx) => (
-          <details key={idx} className="group border border-slate-200 rounded-2xl overflow-hidden">
+          <details key={idx} className="group border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
             <summary className="flex justify-between items-center p-6 cursor-pointer list-none hover:bg-slate-50 transition-colors">
               <span className="font-bold text-slate-800">{faq.question}</span>
               <IconMap.ChevronDown className="w-5 h-5 transition-transform group-open:rotate-180 text-slate-400" />
             </summary>
-            <div className="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-50">
+            <div className="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-50 bg-slate-50/50">
               {faq.answer}
             </div>
           </details>

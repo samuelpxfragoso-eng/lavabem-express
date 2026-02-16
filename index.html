@@ -13,11 +13,6 @@
     <meta property="og:description" content="Roupas limpas, secas e perfumadas com as melhores marcas. Espaço climatizado com Wi-Fi em Porto Alegre." />
     <meta property="og:image" content="https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171428.png" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="LavaBem Express - Lavanderia Profissional Self-Service" />
-    <meta property="twitter:description" content="Lave e seque em 60 min com OMO e Comfort. Aberto todos os dias até as 23h." />
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +26,7 @@
       body {
         font-family: 'Inter', sans-serif;
         scroll-behavior: smooth;
+        margin: 0;
       }
       .font-brand { font-family: 'Pacifico', cursive; }
       .font-heading { font-family: 'Bebas Neue', sans-serif; }
@@ -43,13 +39,8 @@
         animation: bounce-subtle 2s infinite ease-in-out;
       }
       
-      .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-      }
-      .scrollbar-hide {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
       @keyframes marquee {
         0% { transform: translateX(0); }
@@ -58,27 +49,27 @@
       .animate-marquee {
         display: flex;
         width: max-content;
-        animation: marquee 35s linear infinite;
+        animation: marquee 40s linear infinite;
       }
-      .animate-marquee:hover {
-        animation-play-state: paused;
-      }
+      .animate-marquee:hover { animation-play-state: paused; }
 
       .card-shadow {
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.564.0"
-  }
-}
-</script>
-</head>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19.0.0",
+        "react/": "https://esm.sh/react@19.0.0/",
+        "react-dom": "https://esm.sh/react-dom@19.0.0",
+        "react-dom/": "https://esm.sh/react-dom@19.0.0/",
+        "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+        "lucide-react": "https://esm.sh/lucide-react@0.475.0?external=react"
+      }
+    }
+    </script>
+  </head>
   <body class="bg-white text-slate-900">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
