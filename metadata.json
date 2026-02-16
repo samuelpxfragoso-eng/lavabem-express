@@ -1,0 +1,8 @@
+{
+  "name": "Lavabemexpress - Lavanderia Profissional",
+  "description": "Landing page moderna para a lavanderia Lavabemexpress, focada em praticidade, cuidado com tecidos e agendamento via WhatsApp.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
