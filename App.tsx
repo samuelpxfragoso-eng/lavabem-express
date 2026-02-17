@@ -24,7 +24,7 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <span className={`text-3xl font-brand transition-colors ${isScrolled ? 'text-[#16a34a]' : 'text-white'}`}>Lavabemexpress</span>
+          <span className={`text-4xl font-brand transition-colors pt-2 ${isScrolled ? 'text-[#16a34a]' : 'text-white'}`}>Lavabemexpress</span>
         </div>
         <nav className="hidden md:flex gap-8">
           {navItems.map((item) => (
@@ -38,7 +38,7 @@ const Header = () => {
           ))}
         </nav>
         <a 
-          href="https://wa.link/fh6wk8" 
+          href="https://wa.link/se7bxv" 
           target="_blank" 
           className="bg-[#16a34a] hover:bg-[#15803d] text-white px-5 py-2 rounded-full text-sm font-bold transition-transform active:scale-95 shadow-lg flex items-center gap-2"
         >
@@ -67,7 +67,7 @@ const Hero = () => (
       <h1 className="text-6xl md:text-8xl font-heading mb-6 drop-shadow-lg text-white tracking-tighter">LAVABEM EXPRESS</h1>
       <p className="text-xl md:text-2xl mb-10 font-light opacity-90 leading-relaxed">
         Sua lavanderia Self-Service em Porto Alegre. <br className="hidden md:block"/>
-        Roupas limpas, secas e perfumadas com Omo e Comfort.
+        Roupas limpas, secas e perfumadas com Omo e Comfort da linha profissional!
       </p>
       <div className="flex flex-col md:flex-row gap-4 justify-center">
         <a href="#planos" className="bg-[#16a34a] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#15803d] transition-all shadow-lg">
@@ -111,7 +111,7 @@ const InstagramSection = () => {
   const igImages = [
     "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171428.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNDI4LnBuZyIsImlhdCI6MTc3MTI3MzEzMCwiZXhwIjoxODAyODA5MTMwfQ.3KWJJc1eCnmTxB8NEva5har_wxSHnQrgtN6vfLqd6S4",
     "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171443.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNDQzLnBuZyIsImlhdCI6MTc3MTI3MzE1OSwiZXhwIjoxODAyODA5MTU5fQ.uBHA7oY5V6gY8wJY_UAW8RN9asMyu1P--KIgKN4f08o",
-    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171506.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNTA2LnBuZyIsImlhdCI6MTc3MTI3MzE4NCwiZXhwIjoxODAyODA5MTg0fQ.CwPeyc7trFgUdkSXOB_Y6wmx0BimaCoVRMXQug9mlJE",
+    "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171506.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNTA2LnBuZyIsImlhdCI6MTc3MTI3MzE8NCwiZXhwIjoxODAyODA5MTg0fQ.CwPeyc7trFgUdkSXOB_Y6wmx0BimaCoVRMXQug9mlJE",
     "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171549.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNTQ5LnBuZyIsImlhdCI6MTc3MTI3MzIyMywiZXhwIjoxODAyODA5MjIzfQ.FqO4S9-viVShs5YXHAFBgWUp2HQ0wvd5eMZXUBE2EY0",
     "https://ophugihxmlphgcryuode.supabase.co/storage/v1/object/sign/inova7/Captura%20de%20tela%202026-02-16%20171525.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82NjhkNTkyYi05MDM0LTRjNjgtYmI3Ny03YzYzYTA2NTM0OTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbm92YTcvQ2FwdHVyYSBkZSB0ZWxhIDIwMjYtMDItMTYgMTcxNTI1LnBuZyIsImlhdCI6MTc3MTI3MzI0NSwiZXhwIjoxODAyODA5MjQ1fQ.Hs5fhbpimZ8WpnPbeosNKvn1FwB_pVRFrVWQGUp6ZCk"
   ];
@@ -128,7 +128,7 @@ const InstagramSection = () => {
           </h2>
         </div>
         <p className="text-slate-500 text-lg">
-          Confira o dia a dia da nossa lavanderia e fique por dentro das novidades.
+          Confira o dia a dia da nossa lavanderia e fique por dentro das novidades e promoções!
         </p>
       </div>
 
@@ -154,7 +154,7 @@ const InstagramSection = () => {
 
       <div className="text-center mt-12">
         <a 
-          href="https://instagram.com/lavabemexpress" 
+          href="https://www.instagram.com/lavabemexpress?igsh=dnVrZ2dmM280em8z" 
           target="_blank" 
           className="inline-flex items-center gap-2 text-[#16a34a] font-bold text-lg hover:underline"
         >
@@ -195,7 +195,7 @@ const Testimonials = () => (
           <p className="text-slate-400">Sua avaliação no Google nos ajuda a crescer e a oferecer o melhor serviço!</p>
         </div>
         <a 
-          href="https://g.page/r/Ca0-PpeWCgxqEAE/review" 
+          href="https://g.page/r/CauKQ-OVvvfuEAE/review" 
           target="_blank" 
           className="bg-white text-slate-900 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-[#16a34a] hover:text-white transition-all shadow-xl flex items-center gap-4 active:scale-95 group"
         >
@@ -286,7 +286,7 @@ const Plans = () => (
         {plans.map((plan) => (
           <div key={plan.id} className="bg-white p-10 rounded-3xl shadow-xl max-w-sm w-full border-2 border-[#16a34a]">
             <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
-            <div className="text-4xl font-bold text-[#16a34a] mb-8">{plan.price} <span className="text-lg text-slate-400 font-normal">/ ciclo</span></div>
+            <div className="text-3xl font-bold text-[#16a34a] mb-8 leading-tight">{plan.price}</div>
             <ul className="space-y-4 mb-10">
               {plan.features.map((feature, idx) => (
                 <li key={idx} className="flex items-center gap-3 text-slate-600">
@@ -294,7 +294,7 @@ const Plans = () => (
                 </li>
               ))}
             </ul>
-            <a href="https://wa.link/fh6wk8" target="_blank" className="block text-center bg-[#16a34a] text-white py-4 rounded-xl font-bold hover:bg-[#15803d] transition-colors shadow-lg">
+            <a href="https://wa.link/se7bxv" target="_blank" className="block text-center bg-[#16a34a] text-white py-4 rounded-xl font-bold hover:bg-[#15803d] transition-colors shadow-lg">
               Começar Agora
             </a>
           </div>
@@ -386,10 +386,10 @@ const Contact = () => (
             </div>
           </div>
           <div className="mt-10 flex gap-4">
-            <a href="https://instagram.com/lavabemexpress" target="_blank" className="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-[#e1306c]">
+            <a href="https://www.instagram.com/lavabemexpress?igsh=dnVrZ2dmM280em8z" target="_blank" className="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-[#e1306c]">
               <IconMap.Instagram className="w-6 h-6" />
             </a>
-            <a href="https://wa.link/fh6wk8" target="_blank" className="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-[#25d366]">
+            <a href="https://wa.link/se7bxv" target="_blank" className="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-[#25d366]">
               <WhatsAppIcon className="w-6 h-6" />
             </a>
           </div>
@@ -413,7 +413,7 @@ const Contact = () => (
 const Footer = () => (
   <footer className="bg-white py-12 border-t border-slate-100">
     <div className="container mx-auto px-4 text-center">
-      <span className="text-2xl font-brand text-[#16a34a] mb-6 block">Lavabemexpress</span>
+      <span className="text-3xl font-brand text-[#16a34a] mb-6 block">Lavabemexpress</span>
       <p className="text-slate-400 text-sm">© {new Date().getFullYear()} Lavabem Express - Porto Alegre. Todos os direitos reservados.</p>
     </div>
   </footer>
@@ -421,7 +421,7 @@ const Footer = () => (
 
 const WhatsAppWidget = () => (
   <a 
-    href="https://wa.link/fh6wk8" 
+    href="https://wa.link/se7bxv" 
     target="_blank" 
     className="fixed bottom-8 right-8 z-[100] bg-[#22c55e] p-4 rounded-full shadow-2xl transition-transform hover:scale-110 active:scale-90 animate-bounce-subtle"
   >
