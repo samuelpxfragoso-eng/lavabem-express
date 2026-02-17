@@ -137,13 +137,16 @@ const InstagramSection = () => {
           {loopImages.map((src, idx) => (
             <div 
               key={idx} 
-              className="min-w-[280px] h-[350px] md:min-w-[320px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl flex-shrink-0 transition-transform hover:scale-105 relative"
+              className="min-w-[280px] h-[350px] md:min-w-[320px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl flex-shrink-0 transition-transform hover:scale-105 relative bg-slate-100 border border-slate-50"
             >
               <img 
                 src={src} 
                 alt={`Instagram post ${idx}`} 
                 className="w-full h-full object-cover"
                 loading="lazy"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.opacity = '0';
+                }}
               />
             </div>
           ))}
